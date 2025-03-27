@@ -32,17 +32,6 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.6.2
         with:
-          # Nom de l'artefact (modifiable, par défaut "artifact")
           name: artifact
-          # Chemin vers le fichier, dossier ou pattern à uploader
           path: ./path/to/artifact
-          # Comportement si aucun fichier n'est trouvé : warn, error ou ignore
           if-no-files-found: warn
-          # Nombre de jours de rétention (min 1, max 90)
-          retention-days: 30
-          # Niveau de compression (0 = aucune, 6 = compression par défaut, 9 = meilleure compression)
-          compression-level: 6
-          # Remplacer un artefact existant ? (false par défaut)
-          overwrite: false
-          # Inclure ou non les fichiers cachés (false par défaut)
-          include-hidden-files: false
